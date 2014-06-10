@@ -4,6 +4,7 @@ html, body {
 }
 
 .page-wrap {
+	overflow: hidden;
 	@include gridle_state (desktop) {
 		min-height: 100%;
 		margin-bottom: -230px; 
@@ -86,6 +87,11 @@ footer {
 		margin-bottom: 0;
 		span {
 			color: #63caec;
+		}
+		a, a:link, a:visited {
+			font-size: inherit;
+			color: inherit;
+			text-decoration: none;
 		}
 	}
 

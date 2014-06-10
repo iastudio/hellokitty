@@ -16,7 +16,7 @@
 // main
 @import "settings";
 //@import "text";
-//@import "grid";
+@import "grid";
 @import "else";
 
 *, *:before, *:after {
@@ -24,6 +24,7 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 
 body {
 	font-family: Helvetica, Arial, sans-serif;

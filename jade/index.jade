@@ -4,7 +4,7 @@ doctype html
 html(lang='ru').no-js
   head
     include includes/head
-    | <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    //-| <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   body
     .page-wrap
       header
@@ -35,7 +35,7 @@ html(lang='ru').no-js
       .righter.hide-mobile.hide-tablet
       .container
         .parent
-          .grid-2.grid-mobile-12.grid-tablet-3.item
+          .grid-2.grid-mobile-8.prefix-mobile-2.grid-tablet-3.item
             img(src="i/logo-sanrio.svg", onerror="this.onerror=null; this.src='i/logo-sanrio.png'")
           .grid-5.prefix-desktop-2.grid-mobile-12.grid-tablet-5.item
             a.icon(href="#").grid-4
