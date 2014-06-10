@@ -1,0 +1,249 @@
+
+html, body {
+	height: 100%;
+}
+
+.page-wrap {
+	@include gridle_state (desktop) {
+		min-height: 100%;
+		margin-bottom: -230px; 
+	}
+	&:after {
+		content: "";
+		display: block;
+	}
+}
+.site-footer, .page-wrap:after {
+	@include gridle_state (desktop) {
+		height: 230px;
+	}
+}
+
+footer {
+
+	min-height: 180px;
+	padding-top: 130px;
+	position: relative;
+	background-color: #fff;
+	border-top: 5px solid #8C4547;
+	z-index: 1;
+
+	.righter {
+		position: absolute;
+		right: 0; bottom: 55px;
+		width: 251px; height: 387px;
+		background: url('../i/footer-right-bg.png') 0 0 no-repeat;
+		z-index: 1;
+	}
+	
+	&:before {
+		display: block;
+		position: absolute;
+		width: 100%; height: 115px;
+		top: 0;
+		content: ' ';
+		background-image: url(../i/bg-pattern.png);
+		background-image: url(../i/bg-pattern.svg), none;
+		background-size: auto;
+		background-position: 0 0;
+		background-repeat: repeat;
+		z-index: -1;
+	}
+
+	&:after {
+		display: block;
+		position: absolute;
+		width: 100%; height: 100%;
+		top: 25px;
+		content: ' ';
+		background: url('../i/footer-bg.png') 0 0 repeat-x;
+		z-index: 0;
+	}
+
+	.item {
+		margin-bottom: 30px;
+		text-align: center;
+		position: relative;
+		z-index: 3;
+		img {
+			width: 100%;
+		}
+	}
+
+	a, a:link, a:visited {
+		color: #0fa3d3;
+		font-size: 14px;
+		text-decoration: underline;
+		&:hover {
+			color: lighten(#0fa3d3, 10%);
+		}
+	}
+
+	.phone {
+		color: #0fa3d3;
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 0;
+		span {
+			color: #63caec;
+		}
+	}
+
+	a.icon {
+		display: block;
+		text-align: center;
+		line-height: 1;
+		font-size: 12px;
+		img {
+			width: auto;
+			float: none;
+		}
+	}
+}
+
+main {
+	//
+	min-height: 700px;
+	//
+	background-color: #fff;
+	@include background-image(linear-gradient(to bottom, #f9dde1 0%, #fff 100%));
+	margin-top: -25px;
+	padding-top: 80px;
+
+	p, h3 {
+		color: #da1757;
+		font-size: 15px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		color: #da1757;
+		font-size: 17px;
+		font-weight: bold;
+	}
+
+	.item {
+		min-height: 260px;
+
+		background-image: url(../i/cloud.png);
+		background-image: url(../i/cloud.svg), none;
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		text-align: center;
+		margin-bottom: 80px;
+
+		position: relative;
+
+		&:after {
+			display: block;
+			position: absolute;
+			bottom: -45px;
+			content: ' ';
+			width: 100%;
+			height: 130px;
+			background-size: contain;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		&.item--pektin:after {
+			background-image: url(../i/pektin.png);
+			background-image: url(../i/pektin.svg), none;
+		}
+
+		&.item--inulin:after {
+			background-image: url(../i/inulin.png);
+			background-image: url(../i/inulin.svg), none;
+		}
+
+		&.item--agar {
+				@include gridle_prefix (3, tablet);
+			&:after {
+				background-image: url(../i/agar.png);
+				background-image: url(../i/agar.svg), none;
+			}
+		}
+
+		img {
+			width: 70%;
+			margin-top: 30px;
+		}
+	}
+}
+
+header {
+	//background-color: #fff;
+	position: relative;
+	
+	&:after {
+		display: block;
+		position: absolute;
+		bottom: 25px;
+		content: ' ';
+		width: 100%;
+		height: 5px;
+		background-color: #8C4547;
+	}
+
+	.parent {
+		.header__np-logo {
+			@include gridle_state (mobile) {
+				margin-bottom: 40px;
+			}
+		}
+		.hide-mobile {
+			@include gridle_state (mobile) {
+				display: none !important;
+			}
+		}
+		@include gridle_state (mobile) {
+			@include gridle_vertical_align(bottom);
+		}
+	}
+
+    @include gridle_state (default) {
+		padding-top: 25px;
+    }
+    @include gridle_state (tablet) {
+		padding-top: 20px;
+    }
+    @include gridle_state (mobile) {
+		padding-top: 40px;
+    }
+	
+
+	.header__face, .header__logo-text, .header__np-logo {
+		img {
+			width: 100%;
+		}
+	}
+	.header__face {
+		@include gridle_state (default) {
+			
+	    }
+	    @include gridle_state (tablet) {
+			
+	    }
+	    @include gridle_state (mobile) {
+			
+	    }
+	}
+	.header__logo-text {
+		//min-height: 40px;
+
+		@include gridle_state (default) {
+			margin-top: 50px;
+	    }
+	    @include gridle_state (tablet) {
+			margin-top: 20px;
+	    }
+	    @include gridle_state (mobile) {
+			margin-top: 0;
+	    }
+	}
+	.header__np-logo {
+		min-height: 80px;
+	}
+}

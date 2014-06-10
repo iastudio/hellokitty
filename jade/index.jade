@@ -6,98 +6,48 @@ html(lang='ru').no-js
     include includes/head
     | <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   body
-    .container.gridle-debug
-      .parent
-        .grid-3.grid-mobile-12.grid-ipad-landscape-12.hide-print Logo
-        .grid-5.grid-mobile-12.grid-ipad-landscape-12.hide-print Search
-        .grid-4.grid-mobile-12.hide-ipad-landscape.hide-mobile.hide-print Login
-        .grid-12.hide-print.debug-color-1 Primary navigation
-      .grid-12.parent
-        .grid-8.grid-tablet-12.grid-mobile-12.debug-color-3
-          .content(style='height: 242px;')
-            | Slideshow content
-        .grid-4.grid-tablet-4.grid-mobile-12.debug-color-2
-          .content(style='height: 30px;')
-            | Slideshow menu 1
-        .grid-4.grid-tablet-4.grid-mobile-12.debug-color-2
-          .content(style='height: 30px;')
-            | Slideshow menu 2
-        .grid-4.grid-tablet-4.grid-mobile-12.debug-color-2
-          .content(style='height: 30px;')
-            | Slideshow menu 3
-      .grid-12.debug-color-1 Breadcrumb
-      .grid-4.grid-ipad-landscape-6.grid-tablet-6.grid-mobile-12.push-tablet-6
-        .content(style='height: 100px;')
-          | Highlight 1
-      .grid-4.grid-ipad-landscape-6.grid-tablet-6.grid-mobile-12.pull-tablet-6
-        .content(style='height: 100px;')
-          | Highlight 2
-      .grid-4.grid-ipad-landscape-12.grid-tablet-12.grid-mobile-12.grid-tablet-clear
-        .content(style='height: 100px;')
-          | Highlight 3
-      .grid-6.grid-mobile-12.debug-color-3
-        .content(style='height: 100px;')
-          | Custom box 1
-      .grid-6.grid-mobile-12.debug-color-3
-        .content(style='height: 100px;')
-          | Custom box 2
-      .parent.vertical-align-middle
-        .grid-4.grid-tablet-6.grid-mobile-12.parent.clear-each-2
-          .grid-6.debug-color-6
-            | I have not the same height of my neighbours
-            br
-            | And it's me the reason
-            br
-            | ...
-          .grid-6
-            | I have not the same height of my neighbours
-          .grid-6
-            | I have not the same height of my neighbours
-          .grid-6.debug-color-6
-            | I have not the same height of my neighbours
-            br
-            | And it's me the reason
-            br
-            | ...
-        .grid-4.grid-tablet-6.grid-mobile-12
-          .content
-            | I'm a content that has different height of my neighbours...
-            br
-        .grid-4.grid-tablet-12.grid-mobile-12
-          .content
-            | I'm a content that has different height of my neighbours...
-            br
-            | I'm a content that has different height of my neighbours...
-            br
-            | I'm a content that has different height of my neighbours...
-            br
-            | I'm a content that has different height of my neighbours...
-            br
-            | I'm a content that has different height of my neighbours...
-            br
-            | I'm a content that has different height of my neighbours...
-            br
-      .parent
-        .grid-2.prefix-1.suffix-2
-          | I have a suffix of 2 and a prefix of 1
-        .grid-2.suffix-3
-          | I have a suffix of 3
-        .grid-2
-          | I have nothing
-      .grid-1on5.grid-ipad-landscape-6.grid-tablet-6.grid-mobile-12.grid-tablet-clear.debug-color-4
-        .content(style='height: 100px;')
-          | 1 on 5 (special column)
-      .grid-1on5.grid-ipad-landscape-6.grid-tablet-6.grid-mobile-12.grid-tablet-clear.debug-color-4
-        .content(style='height: 100px;')
-          | 1 on 5 (special column)
-      .grid-1on5.grid-ipad-landscape-12.grid-tablet-4.grid-mobile-12.grid-tablet-clear.debug-color-4
-        .content(style='height: 100px;')
-          | 1 on 5 (special column)
-      .grid-1on5.grid-ipad-landscape-6.grid-tablet-4.grid-mobile-12.grid-tablet-clear.debug-color-4
-        .content(style='height: 100px;')
-          | 1 on 5 (special column)
-      .grid-1on5.grid-ipad-landscape-6.grid-tablet-4.grid-mobile-12.grid-tablet-clear.debug-color-4
-        .content(style='height: 100px;')
-          | 1 on 5 (special column)
-      .grid-12.hide-print Footer
+    .page-wrap
+      header
+        .container
+          .parent
+            .grid-mobile-6.grid-3
+              .header__logo-text.header__logo-text--mobile.hide.show-mobile
+                img(src="i/logo.svg", onerror="this.onerror=null; this.src='i/logo.png'")
+              .header__face
+                img(src="i/logo-face.svg", onerror="this.onerror=null; this.src='i/logo-face.png'")
+            .grid-6.header__logo-text.header__logo-text--desktop.hide-mobile
+              img(src="i/logo.svg", onerror="this.onerror=null; this.src='i/logo.png'")
+            .grid-3.grid-mobile-6.header__np-logo
+              img(src="i/logo-np.svg", onerror="this.onerror=null; this.src='i/logo-np.png'")
+      main
+        .container
+          .grid-4.grid-tablet-6.grid-mobile-12.item.item--pektin
+            img(src="i/pektin-photo.png")
+          .grid-4.grid-tablet-6.grid-mobile-12.item.item--inulin
+            img(src="i/inulin-photo.png")
+          .grid-4.grid-tablet-6.grid-mobile-12.item.item--agar
+            img(src="i/agar-photo.png")
+        .container
+          .grid-12
+            p Бифифруты Hello Kitty  - это кисломолочные продукты нового поколения с пре- и пробиотиками.<br>Без сахара, без крахмала, без консервантов.
+            h3 Любимый персонаж + живая польза + вкусный продукт<br>= идеальное сочетание для вашего здоровья.
+    footer
+      .righter.hide-mobile.hide-tablet
+      .container
+        .parent
+          .grid-2.grid-mobile-12.grid-tablet-3.item
+            img(src="i/logo-sanrio.svg", onerror="this.onerror=null; this.src='i/logo-sanrio.png'")
+          .grid-5.prefix-desktop-2.grid-mobile-12.grid-tablet-5.item
+            a.icon(href="#").grid-4
+              .image: img(src="i/icon-cat.png")
+              |Скачать раздел каталога
+            a.icon(href="#").grid-4
+              .image: img(src="i/icon-spec.png")
+              |Скачать спецификацию
+            a.icon(href="#").grid-4
+              .image: img(src="i/icon-cert.png")
+              |Скачать сертификаты
+          .grid-3.grid-mobile-12.grid-tablet-4.item
+            h1.phone <span>(423)</span> 250-55-50
+            a(href="#") Контактная информация
     include includes/tail

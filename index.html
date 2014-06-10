@@ -12,6 +12,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="i/icons/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="i/icons/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="i/icons/apple-touch-icon-precomposed.png">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/app.css">
     <!--if lt IE 9
     <script src="js/vendor/html5shiv.min.js"></script>
@@ -23,79 +24,48 @@
     <script src="js/vendor/modernizr.js"></script><script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </head>
   <body>
-    <div class="container gridle-debug">
-      <div class="parent">
-        <div class="grid-3 grid-mobile-12 grid-ipad-landscape-12 hide-print">Logo</div>
-        <div class="grid-5 grid-mobile-12 grid-ipad-landscape-12 hide-print">Search</div>
-        <div class="grid-4 grid-mobile-12 hide-ipad-landscape hide-mobile hide-print">Login</div>
-        <div class="grid-12 hide-print debug-color-1">Primary navigation</div>
-      </div>
-      <div class="grid-12 parent">
-        <div class="grid-8 grid-tablet-12 grid-mobile-12 debug-color-3">
-          <div style="height: 242px;" class="content">Slideshow content</div>
+    <div class="page-wrap">
+      <header>
+        <div class="container">
+          <div class="parent">
+            <div class="grid-mobile-6 grid-3">
+              <div class="header__logo-text header__logo-text--mobile hide show-mobile"><img src="i/logo.svg" onerror="this.onerror=null; this.src='i/logo.png'"></div>
+              <div class="header__face"><img src="i/logo-face.svg" onerror="this.onerror=null; this.src='i/logo-face.png'"></div>
+            </div>
+            <div class="grid-6 header__logo-text header__logo-text--desktop hide-mobile"><img src="i/logo.svg" onerror="this.onerror=null; this.src='i/logo.png'"></div>
+            <div class="grid-3 grid-mobile-6 header__np-logo"><img src="i/logo-np.svg" onerror="this.onerror=null; this.src='i/logo-np.png'"></div>
+          </div>
         </div>
-        <div class="grid-4 grid-tablet-4 grid-mobile-12 debug-color-2">
-          <div style="height: 30px;" class="content">Slideshow menu 1</div>
+      </header>
+      <main>
+        <div class="container">
+          <div class="grid-4 grid-tablet-6 grid-mobile-12 item item--pektin"><img src="i/pektin-photo.png"></div>
+          <div class="grid-4 grid-tablet-6 grid-mobile-12 item item--inulin"><img src="i/inulin-photo.png"></div>
+          <div class="grid-4 grid-tablet-6 grid-mobile-12 item item--agar"><img src="i/agar-photo.png"></div>
         </div>
-        <div class="grid-4 grid-tablet-4 grid-mobile-12 debug-color-2">
-          <div style="height: 30px;" class="content">Slideshow menu 2</div>
+        <div class="container">
+          <div class="grid-12">
+            <p>Бифифруты Hello Kitty  - это кисломолочные продукты нового поколения с пре- и пробиотиками.<br>Без сахара, без крахмала, без консервантов.</p>
+            <h3>Любимый персонаж + живая польза + вкусный продукт<br>= идеальное сочетание для вашего здоровья.</h3>
+          </div>
         </div>
-        <div class="grid-4 grid-tablet-4 grid-mobile-12 debug-color-2">
-          <div style="height: 30px;" class="content">Slideshow menu 3</div>
-        </div>
-      </div>
-      <div class="grid-12 debug-color-1">Breadcrumb</div>
-      <div class="grid-4 grid-ipad-landscape-6 grid-tablet-6 grid-mobile-12 push-tablet-6">
-        <div style="height: 100px;" class="content">Highlight 1</div>
-      </div>
-      <div class="grid-4 grid-ipad-landscape-6 grid-tablet-6 grid-mobile-12 pull-tablet-6">
-        <div style="height: 100px;" class="content">Highlight 2</div>
-      </div>
-      <div class="grid-4 grid-ipad-landscape-12 grid-tablet-12 grid-mobile-12 grid-tablet-clear">
-        <div style="height: 100px;" class="content">Highlight 3</div>
-      </div>
-      <div class="grid-6 grid-mobile-12 debug-color-3">
-        <div style="height: 100px;" class="content">Custom box 1</div>
-      </div>
-      <div class="grid-6 grid-mobile-12 debug-color-3">
-        <div style="height: 100px;" class="content">Custom box 2</div>
-      </div>
-      <div class="parent vertical-align-middle">
-        <div class="grid-4 grid-tablet-6 grid-mobile-12 parent clear-each-2">
-          <div class="grid-6 debug-color-6">I have not the same height of my neighbours<br>And it's me the reason<br>...</div>
-          <div class="grid-6">I have not the same height of my neighbours</div>
-          <div class="grid-6">I have not the same height of my neighbours</div>
-          <div class="grid-6 debug-color-6">I have not the same height of my neighbours<br>And it's me the reason<br>...</div>
-        </div>
-        <div class="grid-4 grid-tablet-6 grid-mobile-12">
-          <div class="content">I'm a content that has different height of my neighbours...<br></div>
-        </div>
-        <div class="grid-4 grid-tablet-12 grid-mobile-12">
-          <div class="content">I'm a content that has different height of my neighbours...<br>I'm a content that has different height of my neighbours...<br>I'm a content that has different height of my neighbours...<br>I'm a content that has different height of my neighbours...<br>I'm a content that has different height of my neighbours...<br>I'm a content that has different height of my neighbours...<br></div>
-        </div>
-      </div>
-      <div class="parent">
-        <div class="grid-2 prefix-1 suffix-2">I have a suffix of 2 and a prefix of 1</div>
-        <div class="grid-2 suffix-3">I have a suffix of 3</div>
-        <div class="grid-2">I have nothing</div>
-      </div>
-      <div class="grid-1on5 grid-ipad-landscape-6 grid-tablet-6 grid-mobile-12 grid-tablet-clear debug-color-4">
-        <div style="height: 100px;" class="content">1 on 5 (special column)</div>
-      </div>
-      <div class="grid-1on5 grid-ipad-landscape-6 grid-tablet-6 grid-mobile-12 grid-tablet-clear debug-color-4">
-        <div style="height: 100px;" class="content">1 on 5 (special column)</div>
-      </div>
-      <div class="grid-1on5 grid-ipad-landscape-12 grid-tablet-4 grid-mobile-12 grid-tablet-clear debug-color-4">
-        <div style="height: 100px;" class="content">1 on 5 (special column)</div>
-      </div>
-      <div class="grid-1on5 grid-ipad-landscape-6 grid-tablet-4 grid-mobile-12 grid-tablet-clear debug-color-4">
-        <div style="height: 100px;" class="content">1 on 5 (special column)</div>
-      </div>
-      <div class="grid-1on5 grid-ipad-landscape-6 grid-tablet-4 grid-mobile-12 grid-tablet-clear debug-color-4">
-        <div style="height: 100px;" class="content">1 on 5 (special column)</div>
-      </div>
-      <div class="grid-12 hide-print">Footer</div>
+      </main>
     </div>
+    <footer>
+      <div class="righter hide-mobile hide-tablet"></div>
+      <div class="container">
+        <div class="parent">
+          <div class="grid-2 grid-mobile-12 grid-tablet-3 item"><img src="i/logo-sanrio.svg" onerror="this.onerror=null; this.src='i/logo-sanrio.png'"></div>
+          <div class="grid-5 prefix-desktop-2 grid-mobile-12 grid-tablet-5 item"><a href="#" class="icon grid-4">
+              <div class="image"><img src="i/icon-cat.png"></div>Скачать раздел каталога</a><a href="#" class="icon grid-4">
+              <div class="image"><img src="i/icon-spec.png"></div>Скачать спецификацию</a><a href="#" class="icon grid-4">
+              <div class="image"><img src="i/icon-cert.png"></div>Скачать сертификаты</a></div>
+          <div class="grid-3 grid-mobile-12 grid-tablet-4 item">
+            <h1 class="phone"><span>(423)</span> 250-55-50</h1><a href="#">Контактная информация</a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!--[if (!IE)|(gt IE 8)]><!-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <!--<![endif]-->

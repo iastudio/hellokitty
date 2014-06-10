@@ -7,6 +7,19 @@
 	debug: true
 ));
 
+// @include gridle_register_state( xs, (
+//     max-width : 768px
+// ) );
+// @include gridle_register_state( sm , (
+//     min-width : 768px
+// ) );
+// @include gridle_register_state( md, (
+//     min-width : 992px
+// ) );
+// @include gridle_register_state( lg, (
+//     min-width : 1200px
+// ) );
+
 // register special columns :
 @include gridle_register_column('1on5', 1, 5);
 
