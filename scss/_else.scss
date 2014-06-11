@@ -7,7 +7,7 @@ html, body {
 	overflow: hidden;
 	@include gridle_state (desktop) {
 		min-height: 100%;
-		margin-bottom: -230px; 
+		margin-bottom: -180px; 
 	}
 	&:after {
 		content: "";
@@ -16,22 +16,22 @@ html, body {
 }
 .site-footer, .page-wrap:after {
 	@include gridle_state (desktop) {
-		height: 230px;
+		height: 180px;
 	}
 }
 
 footer {
 
-	min-height: 180px;
-	padding-top: 130px;
+	//min-height: 100px;
+	padding-top: 60px;
 	position: relative;
-	background-color: #fff;
+	background-color: #FCFCFA;
 	border-top: 5px solid #8C4547;
 	z-index: 1;
 
 	.righter {
 		position: absolute;
-		right: 0; bottom: 55px;
+		right: 0; bottom: -15px;
 		width: 251px; height: 387px;
 		background: url('../i/footer-right-bg.png') 0 0 no-repeat;
 		z-index: 1;
@@ -55,17 +55,26 @@ footer {
 		display: block;
 		position: absolute;
 		width: 100%; height: 100%;
-		top: 25px;
+		top: 0;
 		content: ' ';
 		background: url('../i/footer-bg.png') 0 0 repeat-x;
 		z-index: 0;
 	}
 
 	.item {
-		margin-bottom: 30px;
+		margin-bottom: 0;
 		text-align: center;
 		position: relative;
 		z-index: 3;
+		@include gridle_state (default) {
+		
+	    }
+	    @include gridle_state (tablet) {
+			
+	    }
+	    @include gridle_state (mobile) {
+			margin-bottom: 30px;
+	    }
 		img {
 			width: 100%;
 		}
@@ -79,12 +88,15 @@ footer {
 			color: lighten(#0fa3d3, 10%);
 		}
 	}
-
+	.logo-sanrio {
+		margin-top: 10px;
+	}
 	.phone {
 		color: #0fa3d3;
 		font-size: 24px;
 		font-weight: bold;
 		margin-bottom: 0;
+		margin-top: 10px;
 		span {
 			color: #63caec;
 		}
@@ -109,18 +121,18 @@ footer {
 
 main {
 	//
-	min-height: 700px;
+	//min-height: 700px;
 	//
 	background-color: #fff;
 	@include background-image(linear-gradient(to bottom, #f9dde1 0%, #fff 100%));
 	margin-top: -25px;
-	padding-top: 80px;
+	padding-top: 30px;
 
 	p, h3 {
 		color: #da1757;
 		font-size: 15px;
 		text-align: center;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 
 	h3 {
@@ -130,7 +142,7 @@ main {
 	}
 
 	.item {
-		min-height: 260px;
+		//min-height: 100px;
 
 		background-image: url(../i/cloud.png);
 		background-image: url(../i/cloud.svg), none;
@@ -138,7 +150,7 @@ main {
 		background-position: center center;
 		background-repeat: no-repeat;
 		text-align: center;
-		margin-bottom: 80px;
+		margin-bottom: 40px;
 
 		position: relative;
 
@@ -210,7 +222,7 @@ header {
 	}
 
     @include gridle_state (default) {
-		padding-top: 25px;
+		padding-top: 10px;
     }
     @include gridle_state (tablet) {
 		padding-top: 20px;
